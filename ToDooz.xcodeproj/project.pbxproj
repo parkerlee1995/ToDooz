@@ -14,9 +14,13 @@
 		CAAC9B12216D627E006AC5D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAC9B10216D627E006AC5D7 /* LaunchScreen.storyboard */; };
 		CAAC9B21216E67D4006AC5D7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAAC9B1F216E67D4006AC5D7 /* DataModel.xcdatamodeld */; };
 		CAAC9B44216E9855006AC5D7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAC9B43216E9855006AC5D7 /* CategoryViewController.swift */; };
+		FFFC9FF124120957EC6DDCBB /* Pods_ToDooz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0583B942923E2423A366FD5E /* Pods_ToDooz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0583B942923E2423A366FD5E /* Pods_ToDooz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDooz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4D93DC21C92AE06DE41084 /* Pods-ToDooz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDooz.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDooz/Pods-ToDooz.release.xcconfig"; sourceTree = "<group>"; };
+		1BD1F131927B5C8DC5318E9B /* Pods-ToDooz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDooz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDooz/Pods-ToDooz.debug.xcconfig"; sourceTree = "<group>"; };
 		CAAC9B04216D6278006AC5D7 /* ToDooz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDooz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAC9B07216D6278006AC5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAC9B09216D6278006AC5D7 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFFC9FF124120957EC6DDCBB /* Pods_ToDooz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E4F8F6B65E06D1F2F7EA05D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0583B942923E2423A366FD5E /* Pods_ToDooz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAAC9AFB216D6278006AC5D7 = {
 			isa = PBXGroup;
 			children = (
 				CAAC9B06216D6278006AC5D7 /* ToDooz */,
 				CAAC9B05216D6278006AC5D7 /* Products */,
+				DA9DC1721A835C90862B65F5 /* Pods */,
+				5E4F8F6B65E06D1F2F7EA05D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DA9DC1721A835C90862B65F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BD1F131927B5C8DC5318E9B /* Pods-ToDooz.debug.xcconfig */,
+				0C4D93DC21C92AE06DE41084 /* Pods-ToDooz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAAC9B16216D627E006AC5D7 /* Build configuration list for PBXNativeTarget "ToDooz" */;
 			buildPhases = (
+				B466C0CA709E837DEAD489E3 /* [CP] Check Pods Manifest.lock */,
 				CAAC9B00216D6278006AC5D7 /* Sources */,
 				CAAC9B01216D6278006AC5D7 /* Frameworks */,
 				CAAC9B02216D6278006AC5D7 /* Resources */,
+				3C4C69C31CC4BB619395EA8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +193,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C4C69C31CC4BB619395EA8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ToDooz/Pods-ToDooz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ToDooz/Pods-ToDooz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B466C0CA709E837DEAD489E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToDooz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAAC9B00216D6278006AC5D7 /* Sources */ = {
@@ -320,6 +387,7 @@
 		};
 		CAAC9B17216D627E006AC5D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD1F131927B5C8DC5318E9B /* Pods-ToDooz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +406,7 @@
 		};
 		CAAC9B18216D627E006AC5D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C4D93DC21C92AE06DE41084 /* Pods-ToDooz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
